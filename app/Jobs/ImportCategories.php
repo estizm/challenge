@@ -58,7 +58,7 @@ class ImportCategories implements ShouldQueue
        return Mail::send('emails.sendInformation', $data, function ($message) {
             $message->from('import@laravel.dev', 'Laravel Challange');
             $message->subject('Kategori import işlem detayı');
-            $message->to('foo@example.com');
+            $message->to('buradayim@90pixel.com');
         });
     }
 }
