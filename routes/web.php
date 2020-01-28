@@ -21,5 +21,3 @@ Route::get('/setCategories', function (){
 });
 
 Route::get('/sendCategoryInformationEmail','MailController@categoryInformation');
-
-Route::get('/emre','CategoriesController@set');
