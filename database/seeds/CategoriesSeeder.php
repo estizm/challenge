@@ -16,5 +16,7 @@ class CategoriesSeeder extends Seeder
             'parent_id' => 0,
             'name' => 'Dil'
         ]);
+
+        factory('App\Categories',10)->create();
     }
 }
