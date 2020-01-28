@@ -10,7 +10,9 @@ use Illuminate\Support\Facades\Storage;
 
 class CategoriesController extends Controller
 {
-
+    /**
+     * @return string
+     */
     public function set()
     {
         try{
@@ -22,10 +24,7 @@ class CategoriesController extends Controller
                 array_push($data,$parsedFileName);
                 asort($data);
             }
-
-
             Excel::import(new CategoriesImport(), storage_path('app/categories/kategoriler-'.end($data).'.xlsx'));
-            //MailController::categoryInformation();
         }catch (\Exception $error){
             return $error->getMessage();
         }
